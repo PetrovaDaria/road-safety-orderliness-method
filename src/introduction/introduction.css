@@ -1,0 +1,22 @@
+.introduction
+{
+  line-height: 24px;
+}
+
+.introduction p
+{
+  padding: 0 40px;
+}
+
+.list
+{
+  list-style: none;
+}
+
+/*
+.list-item + .list-item
+{
+  margin: 5px 0;
+}
+
+ */
