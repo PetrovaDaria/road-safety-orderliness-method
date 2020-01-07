@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/road-safety-orderliness-method/precache-manifest.680acd03d943d0985ca6a92ce97dd518.js"
+  "/road-safety-orderliness-method/precache-manifest.ca0095ca20dd26552ebdaf41b2d26383.js"
 );
 
 self.addEventListener('message', (event) => {
