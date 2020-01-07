@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/road-safety-orderliness-method/static/css/main.670489b0.chunk.css",
+    "main.js": "/road-safety-orderliness-method/static/js/main.dd4cfa40.chunk.js",
+    "main.js.map": "/road-safety-orderliness-method/static/js/main.dd4cfa40.chunk.js.map",
+    "runtime-main.js": "/road-safety-orderliness-method/static/js/runtime-main.d3ca08c5.js",
+    "runtime-main.js.map": "/road-safety-orderliness-method/static/js/runtime-main.d3ca08c5.js.map",
+    "static/js/2.4168abde.chunk.js": "/road-safety-orderliness-method/static/js/2.4168abde.chunk.js",
+    "static/js/2.4168abde.chunk.js.map": "/road-safety-orderliness-method/static/js/2.4168abde.chunk.js.map",
+    "index.html": "/road-safety-orderliness-method/index.html",
+    "precache-manifest.680acd03d943d0985ca6a92ce97dd518.js": "/road-safety-orderliness-method/precache-manifest.680acd03d943d0985ca6a92ce97dd518.js",
+    "service-worker.js": "/road-safety-orderliness-method/service-worker.js",
+    "static/css/main.670489b0.chunk.css.map": "/road-safety-orderliness-method/static/css/main.670489b0.chunk.css.map",
+    "static/js/2.4168abde.chunk.js.LICENSE": "/road-safety-orderliness-method/static/js/2.4168abde.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3ca08c5.js",
+    "static/js/2.4168abde.chunk.js",
+    "static/css/main.670489b0.chunk.css",
+    "static/js/main.dd4cfa40.chunk.js"
+  ]
+}
