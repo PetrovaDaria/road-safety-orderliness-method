@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/road-safety-orderliness-method/static/css/main.a66bf9d5.chunk.css",
-    "main.js": "/road-safety-orderliness-method/static/js/main.a34ab166.chunk.js",
-    "main.js.map": "/road-safety-orderliness-method/static/js/main.a34ab166.chunk.js.map",
+    "main.css": "/road-safety-orderliness-method/static/css/main.4c28a628.chunk.css",
+    "main.js": "/road-safety-orderliness-method/static/js/main.1bb93d50.chunk.js",
+    "main.js.map": "/road-safety-orderliness-method/static/js/main.1bb93d50.chunk.js.map",
     "runtime-main.js": "/road-safety-orderliness-method/static/js/runtime-main.d3ca08c5.js",
     "runtime-main.js.map": "/road-safety-orderliness-method/static/js/runtime-main.d3ca08c5.js.map",
     "static/js/2.4168abde.chunk.js": "/road-safety-orderliness-method/static/js/2.4168abde.chunk.js",
     "static/js/2.4168abde.chunk.js.map": "/road-safety-orderliness-method/static/js/2.4168abde.chunk.js.map",
     "index.html": "/road-safety-orderliness-method/index.html",
-    "precache-manifest.ca0095ca20dd26552ebdaf41b2d26383.js": "/road-safety-orderliness-method/precache-manifest.ca0095ca20dd26552ebdaf41b2d26383.js",
+    "precache-manifest.a9a2b367495f95b640565156fa9594d9.js": "/road-safety-orderliness-method/precache-manifest.a9a2b367495f95b640565156fa9594d9.js",
     "service-worker.js": "/road-safety-orderliness-method/service-worker.js",
-    "static/css/main.a66bf9d5.chunk.css.map": "/road-safety-orderliness-method/static/css/main.a66bf9d5.chunk.css.map",
+    "static/css/main.4c28a628.chunk.css.map": "/road-safety-orderliness-method/static/css/main.4c28a628.chunk.css.map",
     "static/js/2.4168abde.chunk.js.LICENSE": "/road-safety-orderliness-method/static/js/2.4168abde.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.d3ca08c5.js",
     "static/js/2.4168abde.chunk.js",
-    "static/css/main.a66bf9d5.chunk.css",
-    "static/js/main.a34ab166.chunk.js"
+    "static/css/main.4c28a628.chunk.css",
+    "static/js/main.1bb93d50.chunk.js"
   ]
 }
