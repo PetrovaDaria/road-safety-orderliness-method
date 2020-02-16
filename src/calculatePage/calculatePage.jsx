@@ -4,6 +4,7 @@ import './calculatePage.css';
 
 import { calculateEntropy } from '../lib/helper';
 import Introduction from "../introduction/introduction";
+import MathJax from 'react-mathjax';
 
 export default class CalculatePage extends React.Component {
     state = {
@@ -44,13 +45,6 @@ export default class CalculatePage extends React.Component {
     class = b.with('calculate-page');
 
     render() {
-        calculateEntropy({
-            population: 1547418,
-            auto: 670249,
-            accidents: 1277,
-            injured: 1755,
-            dead: 155
-        });
         const { entropy } = this.state;
         const hasResult = entropy !== '';
 
@@ -58,12 +52,13 @@ export default class CalculatePage extends React.Component {
             <div className={this.class()}>
                 <header className={this.class('header')}>
                     <h1 className={this.class('title')}>
-                        Методика оценки организованности процесса обеспечения БДД на уровне субъекта Федерации
+                        Методика оценки организованности процесса обеспечения БДД на уровне субъекта Российской Федерации, города
                     </h1>
+                    <p className={this.class('author')}>Петров А.И.</p>
                 </header>
                 <main className={this.class('main')}>
                     <Introduction />
-                   {this._renderComponents()}
+                   {this._renderForm()}
                    {this._renderButtons()}
                    {hasResult && this._renderResult()}
                 </main>
@@ -71,24 +66,28 @@ export default class CalculatePage extends React.Component {
         );
     }
 
-    _renderComponents = () => {
+    _renderForm = () => {
         return (
-            <div className={this.class('components')}>
-                {this.components.map(component => (
-                    <React.Fragment
-                        key={component}
-                    >
-                        <label htmlFor={component}>
-                            {this.processedLabels[component]}
-                        </label>
-                        <input
-                            id={component}
-                            onChange={this._onChangeInput(component)}
-                            value={this.state[component]}
-                        />
-                    </React.Fragment>
-                ))}
-            </div>
+            <React.Fragment>
+                <h2 className={this.class('form-title')}>Расчет относительной энтропии</h2>
+                <div className={this.class('form')}>
+                    {this.components.map(component => (
+                        <React.Fragment
+                            key={component}
+                        >
+                            <label htmlFor={component}>
+                                {this.processedLabels[component]}
+                            </label>
+                            <input
+                                id={component}
+                                type="text"
+                                onChange={this._onChangeInput(component)}
+                                value={this.state[component]}
+                            />
+                        </React.Fragment>
+                    ))}
+                </div>
+            </React.Fragment>
         );
     }
 
@@ -109,8 +108,8 @@ export default class CalculatePage extends React.Component {
     _renderButtons = () => {
         return (
             <div className={this.class('buttons')}>
-                {this._renderCalculateButton()}
                 {this._renderResetButton()}
+                {this._renderCalculateButton()}
             </div>
         )
     }
@@ -124,7 +123,7 @@ export default class CalculatePage extends React.Component {
                 onClick={this._calculateEntropy}
                 disabled={isDisabled}
             >
-                Рассчитать энтропию
+                Рассчитать
             </button>
         );
     }
@@ -143,18 +142,49 @@ export default class CalculatePage extends React.Component {
     _renderResult = () => {
         const { entropy } = this.state;
         const level = this._getLevel(entropy);
+        return Number.isNaN(entropy)
+            ?
+            (
+                <div className={this.class('result')}>
+                    Невозможно вычислить
+                </div>
+            )
+            :
+        (
+            <React.Fragment>
+                <div className={this.class('result')}>
+                    {`Относительная энтропия равна ${entropy}. Это `}
+                    <span className="major-text">{`${level} `}</span>
+                    (для 2019 г.) уровень организованности систем ОБДД.
+                </div>
+                {this._renderResultTable()}
+            </React.Fragment>
+        );
+    }
+
+    _renderResultTable = () => {
         return (
-            <div className={this.class('result')}>
-                {`Энтропия равна ${entropy}. Это ${level} (для 2019 г.) уровень организованности систем ОБДД.`}
-            </div>
+            <React.Fragment>
+                <h3 className={this.class('result-table-title')}>Уровень организованности систем ОБДД (для 2019 г.)</h3>
+                <MathJax.Provider>
+                    <div className={this.class('result-table')}>
+                        <span>Высокий</span>
+                        <span>Средний</span>
+                        <span>Низкий</span>
+                        <MathJax.Node formula={'H_n > 0.7'} />
+                        <MathJax.Node formula={'0.7 \\leq H_n \\leq 0.74'} />
+                        <MathJax.Node formula={'H_n > 0.74'} />
+                    </div>
+                </MathJax.Provider>
+            </React.Fragment>
         );
     }
 
     _getLevel = entropy => {
-        if (entropy < 0.7) {
+        if (entropy > 0.741) {
             return 'относительно низкий';
         }
-        if (entropy > 0.741) {
+        if (entropy < 0.7) {
             return 'относительно высокий';
         }
         return 'средний';

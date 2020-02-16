@@ -1,7 +1,7 @@
 .calculate-page
 {
   width: 1000px;
-  margin: 50px auto 0;
+  margin: 50px auto 30px;
 }
 
 .calculate-page__header
@@ -15,13 +15,23 @@
   margin: 20px 0;
 }
 
+.calculate-page__author
+{
+  font-style: italic;
+}
+
 .calculate-page__main
 {
   display: flex;
   flex-direction: column;
 }
 
-.calculate-page__components
+.calculate-page__form-title
+{
+  text-align: center;
+}
+
+.calculate-page__form
 {
   font-size: 18px;
   display: grid;
@@ -29,6 +39,12 @@
   grid-template-columns: 300px 100px;
   grid-row-gap: 10px;
   margin: 0 auto 20px;
+}
+
+
+.calculate-page__form input[type="text"]
+{
+  font-size: 18px;
 }
 
 .calculate-page__buttons
@@ -49,12 +65,27 @@
 
 .calculate-page__btn + .calculate-page__btn
 {
-  margin: 0 0 0 130px;
+  margin: 0 0 0 210px;
 }
 
 .calculate-page__result
 {
-  margin: 30px auto;
+  margin: 30px auto 10px;
+}
+
+.calculate-page__result-table
+{
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: auto auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.calculate-page__result-table-title
+{
+  text-align: center;
 }
 
 input[type='number']::-webkit-outer-spin-button,

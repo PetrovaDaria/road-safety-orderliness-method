@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.major-text
+{
+  font-weight: bold;
+}
+
 .minor-text
 {
   font-size: 14px;
